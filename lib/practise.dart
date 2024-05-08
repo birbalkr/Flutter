@@ -1,4 +1,4 @@
-import 'dart:io';
+// import 'dart:io';
 
 void main(){
   // print("Welcome to Dart");
@@ -8,7 +8,16 @@ void main(){
 
   // print("My name is $Name");
 
-   for (int i = 0; i < 5; i++) {
-     stdout.writeln(i);
-   }
+  //  for (int i = 0; i < 5; i++) {
+  //    stdout.writeln(i);
+  //  }
+
+  // creating class object
+  ClassName();
+
+}
+//  class
+class ClassName {
+  ClassName();
+  
 }
