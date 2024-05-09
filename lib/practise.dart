@@ -1,6 +1,6 @@
 // import 'dart:io';
 
-void main(){
+void main() {
   // print("Welcome to Dart");
 
   // stdout.write("Work Like Print");
@@ -13,11 +13,25 @@ void main(){
   //  }
 
   // creating class object
-  ClassName();
+  // ClassName();
+  var obj = myclass();
+  obj.myfun();
+  obj.myfun1("text");
+
 
 }
 //  class
-class ClassName {
-  ClassName();
-  
+// class ClassName {
+//   ClassName();
+
+// }
+class myclass {
+  // function 
+  void myfun() {
+    print("object");
+  }
+  // function with value 
+  void myfun1(String name) {
+    print(name);
+  }
 }
