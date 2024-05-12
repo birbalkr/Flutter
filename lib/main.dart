@@ -36,7 +36,8 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text("Home"),
         ),
-        body: Column(
+        body: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Text("data"),
             Text('column'),
