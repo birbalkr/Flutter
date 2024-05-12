@@ -35,11 +35,6 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text("Home"),
         ),
-        body: OutlinedButton(
-          child: Text("Button"),
-          onPressed: () {
-            print("OutlinedButton");
-          },
-        ));
+        body: Container(width: 100,height: 100, child: Image.asset('assets/Images/code.png')));
   }
 }
