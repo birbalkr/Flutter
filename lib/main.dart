@@ -35,15 +35,11 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text("Home"),
         ),
-        body:ElevatedButton(
-          child: Text("ElevatedButton"),
-          onPressed: (){
-            print("button");
+        body: OutlinedButton(
+          child: Text("Button"),
+          onPressed: () {
+            print("OutlinedButton");
           },
-          onLongPress: (){
-            print("long press");
-          },
-        ) 
-        );
+        ));
   }
 }
