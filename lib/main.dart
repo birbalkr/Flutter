@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
         body: ListView.separated(
           itemBuilder: (context, index) {
             return ListTile(
-              leading: Text('${index + 1}'),
+              leading: CircleAvatar(backgroundImage: AssetImage('assets/Images/code.png'),backgroundColor: Colors.deepOrangeAccent, radius: 25,),
               title: Text(arrname[index]),
               subtitle: Text("number"),
               trailing: Icon(Icons.ac_unit),
