@@ -40,12 +40,13 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text("Home"),
         ),
-        body: ListView.builder(itemBuilder: (context, index) {
+        body: ListView.separated(itemBuilder: (context, index) {
           return Text(arrnames[index],style: TextStyle(fontSize: 21,fontWeight: FontWeight.w500));
         },
         itemCount: arrnames.length,
-        itemExtent: 100,
-        scrollDirection: Axis.horizontal,
+        separatorBuilder: (context, index) {
+          return Divider(height: 100,thickness: 2,);
+        },
         )
                );
   }
