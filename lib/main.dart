@@ -37,36 +37,17 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text("Home"),
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 11),
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Container(width: 200, height: 200, color: Colors.blue),
-                        Container(width: 200, height: 200, color: Colors.red),
-                        Container(width: 200, height: 200, color: Colors.green),
-                        Container(width: 200, height: 200, color: Colors.black),
-                        Container(width: 200, height: 200, color: Colors.orange),
-                        Container(width: 200, height: 200, color: Colors.yellow)
-                      ],
-                    ),
-                  ),
-                ),
-                Container(height: 200, color: Colors.blue),
-                Container(height: 200, color: Colors.red),
-                Container(height: 200, color: Colors.green),
-                Container(height: 200, color: Colors.black),
-                Container(height: 200, color: Colors.orange),
-                Container(height: 200, color: Colors.yellow)
-              ],
-            ),
-          ),
-        ));
+        body: ListView(
+          scrollDirection: Axis.vertical,
+          reverse: true,
+          children: [
+            Text("one",style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
+            Text("two",style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
+            Text("three",style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
+            Text("four",style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
+            Text("five",style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
+          ],
+        )
+               );
   }
 }
