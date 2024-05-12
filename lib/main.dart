@@ -33,21 +33,35 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-
-    var arrnames = ['Liam','Noah','Oliver','James','Elijah','Mateo','Theodore','Henry','Lucas','William'];
+    var arrnames = [
+      'Liam',
+      'Noah',
+      'Oliver',
+      'James',
+      'Elijah',
+      'Mateo',
+      'Theodore',
+      'Henry',
+      'Lucas',
+      'William'
+    ];
 
     return Scaffold(
         appBar: AppBar(
           title: Text("Home"),
         ),
-        body: ListView.separated(itemBuilder: (context, index) {
-          return Text(arrnames[index],style: TextStyle(fontSize: 21,fontWeight: FontWeight.w500));
-        },
-        itemCount: arrnames.length,
-        separatorBuilder: (context, index) {
-          return Divider(height: 100,thickness: 2,);
-        },
-        )
-               );
+        body: ListView.separated(
+          itemBuilder: (context, index) {
+            return Text(arrnames[index],
+                style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500));
+          },
+          itemCount: arrnames.length,
+          separatorBuilder: (context, index) {
+            return Divider(
+              height: 100,
+              thickness: 2,
+            );
+          },
+        ));
   }
 }
