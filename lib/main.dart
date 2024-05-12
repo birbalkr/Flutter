@@ -35,9 +35,13 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text("Home"),
         ),
-        body: Text(
-          'text',
-          style: TextStyle(fontSize: 45, color: Colors.green, fontWeight: FontWeight.w900,backgroundColor: Colors.indigo),
+        body: Center(
+          child: Container(
+            width: 200,
+            height: 100,
+            color: Colors.blueGrey,
+            child: Center(child: Text("Cotainer widget",style: TextStyle(color: Colors.white70),),),
+          ),
         ));
   }
 }
