@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,6 +36,16 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text("Home"),
         ),
-        body: Container(width: 100,height: 100, child: Image.asset('assets/Images/code.png')));
+        body: Column(
+          children: [
+            Text("data"),
+            Text('column'),
+            Container(
+                width: 100,
+                height: 100,
+                child: Image.asset('assets/Images/code.png'))
+          ],
+        ),
+        );
   }
 }
