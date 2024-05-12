@@ -33,20 +33,33 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Home"),
-        ),
-        body: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Text("data"),
-            Text('column'),
-            Container(
-                width: 100,
-                height: 100,
-                child: Image.asset('assets/Images/code.png'))
-          ],
-        ),
-        );
+      appBar: AppBar(
+        title: Text("Home"),
+      ),
+      body: InkWell(
+        onTap: (){
+          print("tap");
+        },
+        onDoubleTap: (){
+          print("doubletap");
+        },
+        onLongPress: (){
+          print("long press");
+        },
+        child: Container(
+          child: Center(
+            child: InkWell(
+              onTap:(){
+                print("text");
+              } ,
+              child: Text("Text"),
+            ),
+          ),
+        width: 100,
+        height: 100,
+        color: Color.fromARGB(255, 216, 25, 25),
+      ),
+      ),
+    );
   }
 }
