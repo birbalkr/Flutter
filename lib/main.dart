@@ -1,6 +1,4 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,53 +12,57 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Colors.blue,
+        colorScheme:
+            ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 79, 42, 109)),
+        useMaterial3: true,
       ),
-      home: const MyHomePage(),
+      home: const MyHomePage(title: 'Home'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  var arrname = [
+    "Liam",
+    "Noah",
+    "Oliver",
+    "James",
+    "Elijah",
+    "Mateo",
+    "Theodore",
+    "Henry",
+    "Lucas",
+    "William",
+  ];
   @override
   Widget build(BuildContext context) {
-    var arrnames = [
-      'Liam',
-      'Noah',
-      'Oliver',
-      'James',
-      'Elijah',
-      'Mateo',
-      'Theodore',
-      'Henry',
-      'Lucas',
-      'William'
-    ];
-
     return Scaffold(
         appBar: AppBar(
-          title: Text("Home"),
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          title: Text(widget.title),
         ),
         body: ListView.separated(
           itemBuilder: (context, index) {
-            return Text(arrnames[index],
-                style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500));
-          },
-          itemCount: arrnames.length,
-          separatorBuilder: (context, index) {
-            return Divider(
-              height: 100,
-              thickness: 2,
+            return ListTile(
+              leading: Text('${index + 1}'),
+              title: Text(arrname[index]),
+              subtitle: Text("number"),
+              trailing: Icon(Icons.ac_unit),
             );
+          },
+          itemCount: arrname.length,
+          separatorBuilder: (context, index) {
+            return Divider(height: 20, thickness: 2);
           },
         ));
   }
